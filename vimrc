@@ -245,7 +245,7 @@ nmap <leader>a :set autoindent!<CR>
 " NERDTree Settings
 " ------------------------------------------------------------------------------
 " Hide python cache files (.pyc) in NERDTree
-let NERDTreeIgnore=['\.pyc']
+let NERDTreeIgnore=['\.pyc', 'aux', 'pdf', 'pdfsync']
 
 " Quickly edit the vimrc file
 nnoremap <leader>ev <C-w><C-v><C-l>:e $MYVIMRC<cr>
