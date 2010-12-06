@@ -253,3 +253,10 @@ let NERDTreeIgnore=['\.pyc', 'aux', 'pdf', 'pdfsync']
 
 " Quickly edit the vimrc file
 nnoremap <leader>ev <C-w><C-v><C-l>:e $MYVIMRC<cr>
+
+" ------------------------------------------------------------------------------
+" Comments
+" ------------------------------------------------------------------------------
+:nmap <D-/> <plug>NERDCommenterInvert
+:vmap <D-/> <plug>NERDCommenterInvert
+
