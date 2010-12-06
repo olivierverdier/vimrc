@@ -33,7 +33,8 @@ set hidden
 set wildmenu
 set wildmode=list:longest
 set visualbell
-set cursorline
+set cursorline " highlight the line the cursor is on
+set scrolloff=4 " shows some lines below/above the cursor before scrolling
 set ttyfast
 set backspace=indent,eol,start " allow backspacing over everything in insert mode
 
