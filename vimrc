@@ -219,11 +219,11 @@ endif
 " Cursor colour and blinking
 " ------------------------------------------------------------------------------
 highlight Cursor guifg=white guibg=Red
-highlight iCursor guifg=white guibg=steelblue
+highlight iCursor guifg=white guibg=Red
 set guicursor=n-v-c:block-Cursor
-set guicursor+=i:ver100-iCursor
+set guicursor+=i:ver20-iCursor-blinkon600-blinkoff600
 set guicursor+=n-v-c:blinkon0
-set guicursor+=i:blinkwait10
+"set guicursor+=i:blinkwait10
 
 " ------------------------------------------------------------------------------
 " completion
