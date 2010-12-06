@@ -172,6 +172,7 @@ set incsearch
 set showmatch
 set hlsearch
 nnoremap <leader><space> :noh<cr> " get rid of the highlighted searches
+set matchpairs+=<:>
 
 " ------------------------------------------------------------------------------
 " Switch between delimiters with <tab>
