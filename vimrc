@@ -1,3 +1,12 @@
+" ------------------------------------------------------------------------------
+" Bundle Support with pathogen
+" ------------------------------------------------------------------------------
+" Setup Bundle Support {
+" The next two lines ensure that the ~/.vim/bundle/ system works
+		runtime! autoload/pathogen.vim
+		silent! call pathogen#runtime_append_all_bundles()
+" }
+
 set nocompatible	" Use Vim defaults (much better!)
 
 " ------------------------------------------------------------------------------
@@ -7,15 +16,6 @@ if v:lang =~ "utf8$" || v:lang =~ "UTF-8$"
    set fileencodings=utf-8,latin1
 endif
 set encoding=utf-8
-
-" ------------------------------------------------------------------------------
-" Bundle Support with pathogen
-" ------------------------------------------------------------------------------
-" Setup Bundle Support {
-" The next two lines ensure that the ~/.vim/bundle/ system works
-		runtime! autoload/pathogen.vim
-		silent! call pathogen#runtime_append_all_bundles()
-" }
 
 " ------------------------------------------------------------------------------
 " Miscellanous
