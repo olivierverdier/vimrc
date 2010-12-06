@@ -207,6 +207,9 @@ highlight SpecialKey guifg=#4a4a59 ctermfg=3*
 " Toggle line numbers
 " ------------------------------------------------------------------------------
 nmap <leader>n :set number!<CR>
+if exists('+relativenumber')
+	nmap <leader>r :set relativenumber!<CR>
+endif
 
 " I always use q instead of :q and that confuses me, so:
 " :noremap q :q<CR>
