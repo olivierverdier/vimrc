@@ -121,12 +121,15 @@ endif
 " Syntax Highlighting
 " ------------------------------------------------------------------------------
 " Switch syntax highlighting on, when the terminal has colors
-" Also switch on highlighting the last used search pattern.
-" if &t_Co > 2 || has("gui_running")
-  syntax on
-  set hlsearch
+syntax on
+if  has("gui_running")
   colorscheme sinopia
-" endif
+else
+	set t_Co=8
+	set t_Sb=[4%dm
+	set t_Sf=[3%dm
+	colorscheme zellner
+endif
 
 " Show syntax highlighting groups for word under cursor
 " Tip: http://stackoverflow.com/questions/1467438/find-out-to-which-highlight-group-a-particular-keyword-symbol-belongs-in-vim
@@ -140,21 +143,12 @@ function! <SID>SynStack()
 endfunc
 
 " ------------------------------------------------------------------------------
-if &term=="xterm"
-	set t_Co=8
-	set t_Sb=[4%dm
-	set t_Sf=[3%dm
-	colorscheme zellner
-endif
-
-" ------------------------------------------------------------------------------
 " Indentation with tabs
 " ------------------------------------------------------------------------------
 set noexpandtab
 set tabstop=4
 set shiftwidth=4
 set autoindent
-"set smartindent
 
 " ------------------------------------------------------------------------------
 " Search/Replace
