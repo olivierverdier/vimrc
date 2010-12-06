@@ -176,8 +176,8 @@ nnoremap <leader><space> :noh<cr> " get rid of the highlighted searches
 " ------------------------------------------------------------------------------
 " Switch between delimiters with <tab>
 " ------------------------------------------------------------------------------
-nnoremap <tab> %
-vnoremap <tab> %
+nmap <tab> %
+vmap <tab> %
 
 " ------------------------------------------------------------------------------
 " Soft wrapping
