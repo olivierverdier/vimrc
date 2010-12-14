@@ -263,6 +263,7 @@ nnoremap <leader>ev <C-w><C-v><C-l>:e $MYVIMRC<cr>
 " ------------------------------------------------------------------------------
 " Comments
 " ------------------------------------------------------------------------------
-:nmap <D-/> <plug>NERDCommenterInvert
-:vmap <D-/> <plug>NERDCommenterInvert
+nmap <D-/> <plug>NERDCommenterInvert
+vmap <D-/> <plug>NERDCommenterInvert
+
 
