@@ -274,4 +274,19 @@ if has("gui_running")
 	setlocal spell
 endif
 
+" ------------------------------------------------------------------------------
+" Movements
+" ------------------------------------------------------------------------------
+" to move to the neighbouring virtual line below
+" nnoremap j gj
+" nnoremap k gk
 
+" An attempt to change the behaviour of the moving cursor after escape
+" The first problem is that it does not really work right with a
+" The second problem is that in Terminal mode it is less visible
+" :inoremap <Esc> <Esc>`^
+
+" Allow to move to the end of line
+set virtualedit=onemore
+" $ moves after the last character
+nnoremap $ $l
