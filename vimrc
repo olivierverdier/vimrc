@@ -103,8 +103,6 @@ endfunction
 " ------------------------------------------------------------------------------
 " Only do this part when compiled with support for autocommands
 if has("autocmd")
-  " In text files, always limit the width of text to 78 characters
-  autocmd BufRead *.txt set tw=78
   " When editing a file, always jump to the last cursor position
   autocmd BufReadPost *
   \ if line("'\"") > 0 && line ("'\"") <= line("$") |
@@ -187,7 +185,12 @@ vmap <tab> %
 " ------------------------------------------------------------------------------
 " Soft wrapping
 " ------------------------------------------------------------------------------
-:set showbreak=:\ …
+" dispaly line breaks
+set showbreak=…\ \ >
+" no hard wrapping at all
+set textwidth=0
+" no automatic wrapping depending on window width
+set wrapmargin=0
 
 " ------------------------------------------------------------------------------
 " change the leader key to ","
