@@ -65,7 +65,9 @@ set ruler		" show the cursor position all the time
 set rulerformat=%30(%=\:b%n%y%m%r%w\ %l,%c%V\ %B\ %P%) 
 
 "statusline setup
-set statusline=%t       "tail of the filename
+" current dir
+set statusline=%{CurDir()}/\ 
+set statusline+=%t       "tail of the filename
 set statusline+=%h      "help file flag
 set statusline+=%y      "filetype
 set statusline+=%r      "read only flag
@@ -81,13 +83,21 @@ set statusline+=%#error#
 set statusline+=%{&paste?'[paste]':''}
 set statusline+=%*
 
+
 set statusline+=%=      "left/right separator
 set statusline+=[%B]\      "hex value of character
 set statusline+=C%v\     "cursor column
 "set statusline+=%V\     "virtual cursor column
 set statusline+=L%l/%L   "cursor line/total lines
 set statusline+=\ %P    "percent through file
+
 set laststatus=2 " always enable status line
+
+function! CurDir()
+	let homedir = $HOME
+    let curdir = substitute(getcwd(), '^'.homedir, "~", "")
+    return curdir
+endfunction
 
 
 " ------------------------------------------------------------------------------
