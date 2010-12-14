@@ -176,6 +176,11 @@ set hlsearch
 nnoremap <leader><space> :noh<cr> " get rid of the highlighted searches
 set matchpairs+=<:>
 
+" search the selected text
+vmap // y/<C-R>"<CR>
+vmap <D-E> y/<C-R>"<CR>
+
+nmap <D-A> :Ack<space>
 " ------------------------------------------------------------------------------
 " Switch between delimiters with <tab>
 " ------------------------------------------------------------------------------
