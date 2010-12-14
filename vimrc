@@ -266,4 +266,12 @@ nnoremap <leader>ev <C-w><C-v><C-l>:e $MYVIMRC<cr>
 nmap <D-/> <plug>NERDCommenterInvert
 vmap <D-/> <plug>NERDCommenterInvert
 
+" ------------------------------------------------------------------------------
+" Spelling
+" ------------------------------------------------------------------------------
+
+if has("gui_running")
+	setlocal spell
+endif
+
 
