@@ -142,7 +142,7 @@ endif
 " Show syntax highlighting groups for word under cursor
 " Tip: http://stackoverflow.com/questions/1467438/find-out-to-which-highlight-group-a-particular-keyword-symbol-belongs-in-vim
 " https://github.com/nelstrom/dotfiles/blob/master/vimrc
-nmap <C-S-P> :call <SID>SynStack()<CR>
+nmap <C-P> :call <SID>SynStack()<CR>
 function! <SID>SynStack()
     if !exists("*synstack")
         return
