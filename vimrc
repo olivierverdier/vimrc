@@ -46,7 +46,6 @@ if exists('+undofile')
 	set undofile " allow undoing even after the file is closed
 endif
 
-"set ai			" always set autoindenting on
 "set backup		" keep a backup file
 set viminfo='20,\"50	" read/write a .viminfo file, don't store more
 			" than 50 lines of registers
@@ -154,10 +153,10 @@ endfunc
 " ------------------------------------------------------------------------------
 " Indentation with tabs
 " ------------------------------------------------------------------------------
-set noexpandtab
-set tabstop=4
-set shiftwidth=4
-set autoindent
+set noexpandtab " tabs are tabs
+set tabstop=4 " tabs display as four spaces
+set shiftwidth=4 " one tab length to shift blocks with >> or <<
+set autoindent " indent at the same level of the previous line
 
 " ------------------------------------------------------------------------------
 " Search/Replace
