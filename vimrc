@@ -213,6 +213,7 @@ set wrapmargin=0
 " ------------------------------------------------------------------------------
 " Shortcut to rapidly toggle `set list`
 nmap <leader>i :set list!<CR>
+nmap <D-I> :set list!<CR>
 " Use the same symbols as TextMate for tabstops and EOLs
 set listchars=tab:▸\ ,eol:¬,trail:·,nbsp:·
 " make them non conspicuous
@@ -223,13 +224,15 @@ highlight SpecialKey guifg=#4a4a59 ctermfg=3*
 " Toggle line numbers
 " ------------------------------------------------------------------------------
 nmap <leader>n :set number!<CR>
+nmap <D-N> :set number!<CR>
 if exists('+relativenumber')
 	nmap <leader>r :set relativenumber!<CR>
+	nmap <D-R> :set relativenumber!<CR>
 endif
 
 " I always use q instead of :q and that confuses me, so:
 " :noremap q :q<CR>
-:noremap <leader>m q
+" :noremap <leader>m q
 
 " ------------------------------------------------------------------------------
 " Cursor colour and blinking
@@ -274,6 +277,7 @@ vmap <D-/> <plug>NERDCommenterInvert
 
 if has("gui_running")
 	setlocal spell
+	nmap <D-'> [s
 endif
 
 " ------------------------------------------------------------------------------
@@ -296,3 +300,7 @@ nnoremap $ $l
 " since <tab> is redefined, we have to save the original behaviour
 nnoremap - <C-O>
 nnoremap = <C-I>
+
+" go to next/previous edited point
+nmap <D-[> g;
+nmap <D-]> g,
