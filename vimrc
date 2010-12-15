@@ -179,12 +179,12 @@ nnoremap <leader><space> :noh<cr> " get rid of the highlighted searches
 vmap // y/<C-R>"<CR>
 vmap <D-E> y/<C-R>"<CR>
 
+" project wide search with Ack
 nmap <D-A> :Ack<space>
 " ------------------------------------------------------------------------------
 " Switch between delimiters with <tab>
 " ------------------------------------------------------------------------------
-nnoremap - <C-O>
-nnoremap = <C-I>
+" tab goes between delimiters
 nmap <tab> %
 vmap <tab> %
 
@@ -194,7 +194,7 @@ set matchpairs+=<:>
 " ------------------------------------------------------------------------------
 " Soft wrapping
 " ------------------------------------------------------------------------------
-" dispaly line breaks
+" display line breaks
 set showbreak=…\ \ >
 " no hard wrapping at all
 set textwidth=0
@@ -292,3 +292,7 @@ endif
 set virtualedit=onemore
 " $ moves after the last character
 nnoremap $ $l
+
+" since <tab> is redefined, we have to save the original behaviour
+nnoremap - <C-O>
+nnoremap = <C-I>
