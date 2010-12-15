@@ -15,3 +15,9 @@ Well documented
 It is also well documented, should you need to change the settings.
 Hopefully you will not have to dive in the docs to understand those settings.
 
+Install
+*******
+
+Go to your home directory and put this line at the top of your ``.vimrc`` file::
+
+    source /path/to/vimrc.vim
