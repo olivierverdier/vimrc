@@ -22,6 +22,7 @@ set encoding=utf-8
 " ------------------------------------------------------------------------------
 
 filetype plugin on " automatic activation of plugin depending on file type
+filetype plugin indent on " load indent files, to automatically do language-dependent indenting
 
 set modelines=0 " to prevent security exploits
 
