@@ -174,7 +174,6 @@ set incsearch
 set showmatch
 set hlsearch
 nnoremap <leader><space> :noh<cr> " get rid of the highlighted searches
-set matchpairs+=<:>
 
 " search the selected text
 vmap // y/<C-R>"<CR>
@@ -188,6 +187,9 @@ nnoremap - <C-O>
 nnoremap = <C-I>
 nmap <tab> %
 vmap <tab> %
+
+" < and > are considering as a matching pair
+set matchpairs+=<:>
 
 " ------------------------------------------------------------------------------
 " Soft wrapping
