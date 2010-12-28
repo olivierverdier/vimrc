@@ -1,9 +1,10 @@
 " ------------------------------------------------------------------------------
 " Bundle Support with pathogen
 " ------------------------------------------------------------------------------
+"  Pathogen url: https://github.com/tpope/vim-pathogen
 " Setup Bundle Support {
 " The next two lines ensure that the ~/.vim/bundle/ system works
-		runtime! autoload/pathogen.vim
+		runtime! pathogen/autoload/pathogen.vim
 		silent! call pathogen#runtime_append_all_bundles()
 " }
 
