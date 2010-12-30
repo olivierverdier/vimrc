@@ -6,6 +6,7 @@
 " The next two lines ensure that the ~/.vim/bundle/ system works
 		runtime! pathogen/autoload/pathogen.vim
 		silent! call pathogen#runtime_append_all_bundles()
+		silent! call pathogen#helptags()
 " }
 
 set nocompatible	" Use Vim defaults (much better!)
