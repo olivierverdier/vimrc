@@ -327,3 +327,12 @@ if has("gui_macvim")
     let macvim_hig_shift_movement = 1
 endif
 
+" ------------------------------------------------------------------------------
+"  Conflict Markers
+" ------------------------------------------------------------------------------
+" https://github.com/nvie/vimrc/
+" highlight conflict markers
+match ErrorMsg '^\(<\|=\|>\)\{7\}\([^=].\+\)\?$'
+" shortcut to jump to next conflict marker
+nmap <silent> <leader>c /^\(<\\|=\\|>\)\{7\}\([^=].\+\)\?$<CR>
+
