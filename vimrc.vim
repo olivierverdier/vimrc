@@ -23,7 +23,8 @@ set encoding=utf-8
 " ------------------------------------------------------------------------------
 
 filetype plugin on " automatic activation of plugin depending on file type
-filetype plugin indent on " load indent files, to automatically do language-dependent indenting
+filetype indent on " load indent files, to automatically do language-dependent indenting
+" last line may be replaced by 'filetype plugin indent on'
 
 set modelines=0 " to prevent security exploits
 
