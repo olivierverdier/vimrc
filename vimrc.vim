@@ -264,8 +264,14 @@ set linespace=2
 let NERDTreeIgnore=['\.pyc', 'aux', 'pdf', 'pdfsync', 'bbl']
 nmap <D-\> :NERDTreeToggle<CR>
 
+" ------------------------------------------------------------------------------
 " Quickly edit the vimrc file
-nnoremap <leader>ev <C-w><C-v><C-l>:e $MYVIMRC<cr>
+" ------------------------------------------------------------------------------
+" to edit in a new window:
+" nnoremap <leader>v <C-w><C-v><C-l>:e $MYVIMRC<cr>
+" edit in current window:
+nnoremap <leader>v :e $MYVIMRC<CR>
+
 
 " ------------------------------------------------------------------------------
 " Comments
