@@ -141,7 +141,7 @@ else
 endif
 
 " Show syntax highlighting groups for word under cursor
-" Tip: http://stackoverflow.com/questions/1467438/find-out-to-which-highlight-group-a-particular-keyword-symbol-belongs-in-vim
+" http://stackoverflow.com/questions/1467438/
 " https://github.com/nelstrom/dotfiles/blob/master/vimrc
 nmap <C-P> :call <SID>SynStack()<CR>
 function! <SID>SynStack()
@@ -177,7 +177,8 @@ set gdefault
 set incsearch
 set showmatch
 set hlsearch
-nnoremap <leader><space> :noh<cr> " get rid of the highlighted searches
+" get rid of the highlighted searches
+nnoremap <leader><space> :noh<cr>
 
 " search the selected text
 vmap // y/<C-R>"<CR>
@@ -233,10 +234,6 @@ if exists('+relativenumber')
 	nmap <leader>r :set relativenumber!<CR>
 	nmap <D-R> :set relativenumber!<CR>
 endif
-
-" I always use q instead of :q and that confuses me, so:
-" :noremap q :q<CR>
-" :noremap <leader>m q
 
 " ------------------------------------------------------------------------------
 " Cursor colour and blinking
