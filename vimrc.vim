@@ -159,6 +159,9 @@ set tabstop=4 " tabs display as four spaces
 set shiftwidth=4 " one tab length to shift blocks with >> or <<
 set autoindent " indent at the same level of the previous line
 
+" Switch autoindent
+nmap <leader>a :set autoindent!<CR>
+
 " ------------------------------------------------------------------------------
 " Search/Replace
 " ------------------------------------------------------------------------------
@@ -253,8 +256,6 @@ set guifont=Bitstream\ Vera\ Sans\ Mono:h12
 set linespace=2
 
 " ------------------------------------------------------------------------------
-" Autoindent?
-nmap <leader>a :set autoindent!<CR>
 
 " ------------------------------------------------------------------------------
 " NERDTree Settings
