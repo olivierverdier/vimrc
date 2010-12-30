@@ -261,7 +261,7 @@ set linespace=2
 " NERDTree Settings
 " ------------------------------------------------------------------------------
 " Hide python cache files (.pyc) in NERDTree
-let NERDTreeIgnore=['\.pyc', 'aux', 'pdf', 'pdfsync']
+let NERDTreeIgnore=['\.pyc', 'aux', 'pdf', 'pdfsync', 'bbl']
 nmap <D-\> :NERDTreeToggle<CR>
 
 " Quickly edit the vimrc file
