@@ -48,10 +48,23 @@ if exists('+undofile')
 	set undofile " allow undoing even after the file is closed
 endif
 
-"set backup		" keep a backup file
 set viminfo='20,\"50	" read/write a .viminfo file, don't store more
 			" than 50 lines of registers
 set history=1000		" keep 50 lines of command line history
+"
+" ------------------------------------------------------------------------------
+" Backups and swaps
+" ------------------------------------------------------------------------------
+
+set backup 						" backups are nice ...
+set backupdir=$HOME/.vimbackup//  " but not when they clog .
+set directory=$HOME/.vimswap// 	" Same for swap files
+set viewdir=$HOME/.vimviews// 	" same for view files
+
+"" Creating directories if they don't exist
+silent execute '!mkdir -p $HOME/.vimbackup'
+silent execute '!mkdir -p $HOME/.vimswap'
+silent execute '!mkdir -p $HOME/.vimviews'
 
 " ------------------------------------------------------------------------------
 " Auto change dir
