@@ -116,13 +116,13 @@ endfunction
 
 
 " ------------------------------------------------------------------------------
+"  Remember cursor position
+" ------------------------------------------------------------------------------
 " Only do this part when compiled with support for autocommands
 if has("autocmd")
   " When editing a file, always jump to the last cursor position
-  autocmd BufReadPost *
-  \ if line("'\"") > 0 && line ("'\"") <= line("$") |
-  \   exe "normal g'\"" |
-  \ endif
+	autocmd BufWinLeave * silent! mkview  "make vim save view (state) (folds, cursor, etc)
+	autocmd BufWinEnter * silent! loadview "make vim load view (state) (folds, cursor, etc)
 endif
 
 if has("cscope")
