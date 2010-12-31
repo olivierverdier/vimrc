@@ -54,8 +54,10 @@ filetype indent on " load indent files, to automatically do language-dependent i
 
 set modelines=0 " to prevent security exploits
 
-
+" Show mode message in white on red
 set showmode
+highlight ModeMsg ctermfg=White ctermbg=Red guifg=White guibg=Red
+
 set showcmd
 set showfulltag
 set hidden
