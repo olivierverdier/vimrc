@@ -58,23 +58,30 @@ set modelines=0 " to prevent security exploits
 set showmode
 highlight ModeMsg ctermfg=White ctermbg=Red guifg=White guibg=Red
 
+" show command information in lower right corner
 set showcmd
+
 set showfulltag
 set hidden
+
+" command line completion
 set wildmenu
 set wildmode=list:longest
+
+" No beep on errors
 set visualbell
-set cursorline " highlight the line the cursor is on
-set scrolloff=4 " shows some lines below/above the cursor before scrolling
+
+" highlight the line the cursor is on
+set cursorline
+
+" shows some lines below/above the cursor before scrolling
+set scrolloff=4
+
+" Better terminal display
 set ttyfast
-set backspace=indent,eol,start " allow backspacing over everything in insert mode
 
-
-" last vim version only
-" set relativenumber " relative line numbers
-if exists('+undofile')
-	set undofile " allow undoing even after the file is closed
-endif
+" allow backspacing over everything in insert mode
+set backspace=indent,eol,start
 
 set viminfo='20,\"50	" read/write a .viminfo file, don't store more
 			" than 50 lines of registers
