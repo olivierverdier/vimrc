@@ -20,6 +20,31 @@ endif
 set encoding=utf-8
 
 " ------------------------------------------------------------------------------
+" Syntax Highlighting
+" ------------------------------------------------------------------------------
+" Switch syntax highlighting on, when the terminal has colors
+syntax on
+if  has("gui_running")
+  colorscheme sinopia
+else
+	set t_Co=8
+	set t_Sb=[4%dm
+	set t_Sf=[3%dm
+	colorscheme zellner
+endif
+
+" Show syntax highlighting groups for word under cursor
+" http://stackoverflow.com/questions/1467438/
+" https://github.com/nelstrom/dotfiles/blob/master/vimrc
+nmap <C-P> :call <SID>SynStack()<CR>
+function! <SID>SynStack()
+    if !exists("*synstack")
+        return
+    endif
+    echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
+endfunc
+
+" ------------------------------------------------------------------------------
 " Miscellanous
 " ------------------------------------------------------------------------------
 
@@ -29,43 +54,44 @@ filetype indent on " load indent files, to automatically do language-dependent i
 
 set modelines=0 " to prevent security exploits
 
-
+" Show mode message in white on red
 set showmode
+highlight ModeMsg ctermfg=White ctermbg=Red guifg=White guibg=Red
+
+" show command information in lower right corner
 set showcmd
+
 set showfulltag
 set hidden
+
+" command line completion
 set wildmenu
 set wildmode=list:longest
+
+" No beep on errors
 set visualbell
-set cursorline " highlight the line the cursor is on
-set scrolloff=4 " shows some lines below/above the cursor before scrolling
+
+" highlight the line the cursor is on
+set cursorline
+
+" shows some lines below/above the cursor before scrolling
+set scrolloff=4
+
+" Better terminal display
 set ttyfast
-set backspace=indent,eol,start " allow backspacing over everything in insert mode
 
+" allow backspacing over everything in insert mode
+set backspace=indent,eol,start
 
-" last vim version only
-" set relativenumber " relative line numbers
-if exists('+undofile')
-	set undofile " allow undoing even after the file is closed
-endif
-
-set viminfo='20,\"50	" read/write a .viminfo file, don't store more
-			" than 50 lines of registers
-set history=1000		" keep 50 lines of command line history
-"
 " ------------------------------------------------------------------------------
 " Backups and swaps
 " ------------------------------------------------------------------------------
 
 set backup 						" backups are nice ...
-set backupdir=$HOME/.vimbackup//  " but not when they clog .
-set directory=$HOME/.vimswap// 	" Same for swap files
-set viewdir=$HOME/.vimviews// 	" same for view files
-
-"" Creating directories if they don't exist
-silent execute '!mkdir -p $HOME/.vimbackup'
-silent execute '!mkdir -p $HOME/.vimswap'
-silent execute '!mkdir -p $HOME/.vimviews'
+set backupdir=$HOME/.vim/tmp/backup//  " but not when they clog .
+silent execute '!mkdir -p $HOME/.vim/tmp/backup'
+set directory=$HOME/.vim/tmp/swap// 	" Same for swap files
+silent execute '!mkdir -p $HOME/.vim/tmp/swap'
 
 " ------------------------------------------------------------------------------
 " Auto change dir
@@ -117,8 +143,26 @@ endfunction
 
 
 " ------------------------------------------------------------------------------
-"  Remember cursor position
+" Store info after file is closed
 " ------------------------------------------------------------------------------
+
+" Vim session: remember commands, registers and such
+set viminfo='20,\"50	" read/write a .viminfo file, don't store more
+			" than 50 lines of registers
+set history=1000		" keep 50 lines of command line history
+
+if exists('+undofile')
+	set undofile " allow undoing even after the file is closed
+	set undodir=$HOME/.vim/tmp/undo//
+	silent execute '!mkdir -p $HOME/.vim/tmp/undo'
+endif
+
+" Remember cursor position using views
+
+" Store views in special folder
+set viewdir=$HOME/.vim/tmp/views// 	" same for view files
+silent execute '!mkdir -p $HOME/.vim/tmp/views'
+
 " Only do this part when compiled with support for autocommands
 if has("autocmd")
   " When editing a file, always jump to the last cursor position
@@ -126,31 +170,6 @@ if has("autocmd")
 	autocmd BufWinEnter * silent! loadview "make vim load view (state) (folds, cursor, etc)
 endif
 
-
-" ------------------------------------------------------------------------------
-" Syntax Highlighting
-" ------------------------------------------------------------------------------
-" Switch syntax highlighting on, when the terminal has colors
-syntax on
-if  has("gui_running")
-  colorscheme sinopia
-else
-	set t_Co=8
-	set t_Sb=[4%dm
-	set t_Sf=[3%dm
-	colorscheme zellner
-endif
-
-" Show syntax highlighting groups for word under cursor
-" http://stackoverflow.com/questions/1467438/
-" https://github.com/nelstrom/dotfiles/blob/master/vimrc
-nmap <C-P> :call <SID>SynStack()<CR>
-function! <SID>SynStack()
-    if !exists("*synstack")
-        return
-    endif
-    echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
-endfunc
 
 " ------------------------------------------------------------------------------
 " Indentation with tabs
@@ -179,7 +198,7 @@ set incsearch
 set showmatch
 set hlsearch
 " get rid of the highlighted searches
-nnoremap <leader><space> :noh<cr>
+nnoremap <leader><space> :nohlsearch<cr>
 
 " search the selected text
 vmap // y/<C-R>"<CR>
@@ -268,7 +287,7 @@ nmap <D-\> :NERDTreeToggle<CR>
 " to edit in a new window:
 " nnoremap <leader>v <C-w><C-v><C-l>:e $MYVIMRC<cr>
 " edit in current window:
-nnoremap <leader>v :e $MYVIMRC<CR>
+nnoremap <leader>v :e $HOME/.vim/vimrc.vim<CR>
 
 " ------------------------------------------------------------------------------
 " Split switching
