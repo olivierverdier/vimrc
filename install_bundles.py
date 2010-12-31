@@ -4,8 +4,8 @@
 bundles = {
 		'ack': 'mileszs/ack.vim.git',
 		'autoclose': 'Townk/vim-autoclose.git',
-		'latex-box': 'michaeljsmith/vim-indent-object.git',
-		'latexrc': 'olivierverdier/vim-latex-box.git',
+		'latex-box': 'olivierverdier/vim-latex-box.git',
+		'latexrc': 'olivierverdier/vim-latexrc.git',
 		'matchit': 'tsaleh/vim-matchit.git',
 		'nerdcommenter': 'scrooloose/nerdcommenter.git',
 		'nerdtree': 'spf13/nerdtree.git',
