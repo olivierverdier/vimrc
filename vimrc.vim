@@ -268,7 +268,7 @@ nmap <D-\> :NERDTreeToggle<CR>
 " to edit in a new window:
 " nnoremap <leader>v <C-w><C-v><C-l>:e $MYVIMRC<cr>
 " edit in current window:
-nnoremap <leader>v :e $MYVIMRC<CR>
+nnoremap <leader>v :e $HOME/.vim/vimrc.vim<CR>
 
 " ------------------------------------------------------------------------------
 " Split switching
