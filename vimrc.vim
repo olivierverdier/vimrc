@@ -160,8 +160,8 @@ endif
 " Remember cursor position using views
 
 " Store views in special folder
-set viewdir=$HOME/.vim/tmp/views// 	" same for view files
-silent execute '!mkdir -p $HOME/.vim/tmp/views'
+set viewdir=$HOME/.vimviews// 	" same for view files
+silent execute '!mkdir -p $HOME/.vimviews'
 
 " Only do this part when compiled with support for autocommands
 if has("autocmd")
