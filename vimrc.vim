@@ -277,7 +277,7 @@ set linespace=2
 " ------------------------------------------------------------------------------
 " NERDTree Settings
 " ------------------------------------------------------------------------------
-" Hide python cache files (.pyc) in NERDTree
+" Hide Python and LaTeX auxiliary files
 let NERDTreeIgnore=['\.pyc', 'aux', 'pdf', 'pdfsync', 'bbl']
 nmap <D-\> :NERDTreeToggle<CR>
 
