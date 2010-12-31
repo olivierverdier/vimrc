@@ -20,6 +20,31 @@ endif
 set encoding=utf-8
 
 " ------------------------------------------------------------------------------
+" Syntax Highlighting
+" ------------------------------------------------------------------------------
+" Switch syntax highlighting on, when the terminal has colors
+syntax on
+if  has("gui_running")
+  colorscheme sinopia
+else
+	set t_Co=8
+	set t_Sb=[4%dm
+	set t_Sf=[3%dm
+	colorscheme zellner
+endif
+
+" Show syntax highlighting groups for word under cursor
+" http://stackoverflow.com/questions/1467438/
+" https://github.com/nelstrom/dotfiles/blob/master/vimrc
+nmap <C-P> :call <SID>SynStack()<CR>
+function! <SID>SynStack()
+    if !exists("*synstack")
+        return
+    endif
+    echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
+endfunc
+
+" ------------------------------------------------------------------------------
 " Miscellanous
 " ------------------------------------------------------------------------------
 
@@ -126,31 +151,6 @@ if has("autocmd")
 	autocmd BufWinEnter * silent! loadview "make vim load view (state) (folds, cursor, etc)
 endif
 
-
-" ------------------------------------------------------------------------------
-" Syntax Highlighting
-" ------------------------------------------------------------------------------
-" Switch syntax highlighting on, when the terminal has colors
-syntax on
-if  has("gui_running")
-  colorscheme sinopia
-else
-	set t_Co=8
-	set t_Sb=[4%dm
-	set t_Sf=[3%dm
-	colorscheme zellner
-endif
-
-" Show syntax highlighting groups for word under cursor
-" http://stackoverflow.com/questions/1467438/
-" https://github.com/nelstrom/dotfiles/blob/master/vimrc
-nmap <C-P> :call <SID>SynStack()<CR>
-function! <SID>SynStack()
-    if !exists("*synstack")
-        return
-    endif
-    echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
-endfunc
 
 " ------------------------------------------------------------------------------
 " Indentation with tabs
