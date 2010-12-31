@@ -83,23 +83,15 @@ set ttyfast
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
 
-set viminfo='20,\"50	" read/write a .viminfo file, don't store more
-			" than 50 lines of registers
-set history=1000		" keep 50 lines of command line history
-"
 " ------------------------------------------------------------------------------
 " Backups and swaps
 " ------------------------------------------------------------------------------
 
 set backup 						" backups are nice ...
-set backupdir=$HOME/.vimbackup//  " but not when they clog .
-set directory=$HOME/.vimswap// 	" Same for swap files
-set viewdir=$HOME/.vimviews// 	" same for view files
-
-"" Creating directories if they don't exist
-silent execute '!mkdir -p $HOME/.vimbackup'
-silent execute '!mkdir -p $HOME/.vimswap'
-silent execute '!mkdir -p $HOME/.vimviews'
+set backupdir=$HOME/.vim/tmp/backup//  " but not when they clog .
+silent execute '!mkdir -p $HOME/.vim/tmp/backup'
+set directory=$HOME/.vim/tmp/swap// 	" Same for swap files
+silent execute '!mkdir -p $HOME/.vim/tmp/swap'
 
 " ------------------------------------------------------------------------------
 " Auto change dir
@@ -151,8 +143,26 @@ endfunction
 
 
 " ------------------------------------------------------------------------------
-"  Remember cursor position
+" Store info after file is closed
 " ------------------------------------------------------------------------------
+
+" Vim session: remember commands, registers and such
+set viminfo='20,\"50	" read/write a .viminfo file, don't store more
+			" than 50 lines of registers
+set history=1000		" keep 50 lines of command line history
+
+if exists('+undofile')
+	set undofile " allow undoing even after the file is closed
+	set undodir=$HOME/.vim/tmp/undo//
+	silent execute '!mkdir -p $HOME/.vim/tmp/undo'
+endif
+
+" Remember cursor position using views
+
+" Store views in special folder
+set viewdir=$HOME/.vim/tmp/views// 	" same for view files
+silent execute '!mkdir -p $HOME/.vim/tmp/views'
+
 " Only do this part when compiled with support for autocommands
 if has("autocmd")
   " When editing a file, always jump to the last cursor position
