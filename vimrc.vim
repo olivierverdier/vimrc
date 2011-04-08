@@ -354,7 +354,7 @@ endif
 " highlight conflict markers
 match ErrorMsg '^\(<\|=\|>\)\{7\}\([^=].\+\)\?$'
 " shortcut to jump to next conflict marker
-nmap <silent> <leader>c /^\(<\\|=\\|>\)\{7\}\([^=].\+\)\?$<CR>
+nnoremap <silent> <D-+> /\v^(\<\|\=\|\>){7}<CR>
 
 " ------------------------------------------------------------------------------
 "  Python
