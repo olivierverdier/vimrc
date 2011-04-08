@@ -208,6 +208,7 @@ vmap <D-E> y/<C-R>"<CR>
 
 " project wide search with Ack
 nmap <D-A> :Ack<space>
+let g:ackprg="ack -H -i --nocolor --nogroup --column"
 " ------------------------------------------------------------------------------
 " Switch between delimiters with <tab>
 " ------------------------------------------------------------------------------
