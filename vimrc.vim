@@ -308,7 +308,7 @@ vmap <D-/> <plug>NERDCommenterInvert
 " ------------------------------------------------------------------------------
 
 if has("gui_running")
-	setlocal spell
+	set spell
 	nmap <D-'> [s
 endif
 
