@@ -14,7 +14,7 @@ bundles = {
 		'scmdiff/plugin': 'ghewgill/vim-scmdiff.git',
 		'sinopia': 'olivierverdier/sinopia.git',
 		'snipmate': 'spf13/snipmate.vim.git',
-		'sinpmate-snippets/snippets': 'olivierverdier/snipmate-snippets.git',
+		'snipmate-snippets/snippets': 'olivierverdier/snipmate-snippets.git',
 		'supertab': 'ervandew/supertab.git',
 		'surround': 'tpope/vim-surround.git',
 		'taglist': 'vim-scripts/taglist.vim.git',
