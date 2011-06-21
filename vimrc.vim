@@ -187,9 +187,6 @@ nmap <leader>a :set autoindent!<CR>
 " ------------------------------------------------------------------------------
 " Search/Replace
 " ------------------------------------------------------------------------------
-" using very magic mode by default
-nnoremap / /\v
-vnoremap / /\v
 " smart case search
 set ignorecase
 set smartcase
