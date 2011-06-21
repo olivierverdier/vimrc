@@ -74,14 +74,25 @@ set visualbell
 " highlight the line the cursor is on
 set cursorline
 
-" shows some lines below/above the cursor before scrolling
-set scrolloff=4
-
 " Better terminal display
 set ttyfast
 
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
+
+" ------------------------------------------------------------------------------
+" Scrolling
+" ------------------------------------------------------------------------------
+
+" shows some lines below/above the cursor before scrolling
+set scrolloff=4
+
+nnoremap S J
+vnoremap S J
+nmap J <C-D>
+vmap J <C-D>
+nmap K <C-U>
+vmap K <C-U>
 
 " ------------------------------------------------------------------------------
 " Backups and swaps
