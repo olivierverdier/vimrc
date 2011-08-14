@@ -31,6 +31,8 @@ General Key Bindings
 :⌘]: Next edit position
 :⌘': Previous spelling error
 
+:⌃U: Activate gundo_
+
 :⌘\\: Toggle file explorer split window
 :⌘|: Toggle tag list
 
@@ -99,3 +101,5 @@ Create a symbolic link to the configuration file::
 Install all the bundles::
 
     python ~/.vim/install_bundles.py
+
+.. _gundo: https://github.com/sjl/gundo.vim

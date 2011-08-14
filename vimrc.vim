@@ -91,8 +91,8 @@ nnoremap S J
 vnoremap S J
 nmap J <C-D>
 vmap J <C-D>
-nmap K <C-U>
-vmap K <C-U>
+nnoremap K <C-U>
+vnoremap K <C-U>
 
 " ------------------------------------------------------------------------------
 " Backups and swaps
@@ -378,3 +378,7 @@ let python_highlight_all=1
 let g:LatexBox_no_indent=1
 
 
+" ------------------------------------------------------------------------------
+"  Gundo
+" ------------------------------------------------------------------------------
+noremap <silent> <C-U> :GundoToggle<CR>
