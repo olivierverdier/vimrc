@@ -12,7 +12,6 @@ bundles = {
 		'nerdcommenter': 'scrooloose/nerdcommenter.git',
 		'nerdtree': 'spf13/nerdtree.git',
 		'python': 'vim-scripts/python.vim--Vasiliev.git',
-		'scmdiff/plugin': 'ghewgill/vim-scmdiff.git',
 		'sinopia': 'olivierverdier/sinopia.git',
 		'snipmate': 'spf13/snipmate.vim.git',
 		'snipmate-snippets/snippets': 'olivierverdier/snipmate-snippets.git',
