@@ -1,5 +1,5 @@
 Textmate to Vim switching kit
-============================
+=============================
 
 This vim configuration kit is:
 
@@ -30,6 +30,7 @@ General Key Bindings
 :⌘[: Previous edit position
 :⌘]: Next edit position
 :⌘': Previous spelling error
+:⇥: Switch between delimiters (same as ``%``)
 
 :⌃U: Activate gundo_
 
@@ -37,7 +38,6 @@ General Key Bindings
 :⌘|: Toggle tag list
 
 ://: Search current selection
-:⇥: Switch between delimiters (same as ``%``)
 :⌃W: Switch between split windows
 :_: Switch with last buffer
 
