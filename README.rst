@@ -37,8 +37,11 @@ General Key Bindings
 :⌘|: Toggle tag list
 
 ://: Search current selection
-:_: Switch between split windows
 :⇥: Switch between delimiters (same as ``%``)
+:⌃W: Switch between split windows
+:_: Switch with last buffer
+
+
 :⌃P: Show current syntax scope
 
 ``⌁`` denotes the leader key, which is the backslash ``\`` in this configuration.
