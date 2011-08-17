@@ -66,7 +66,8 @@ set hidden
 
 " command line completion
 set wildmenu
-set wildmode=list:longest
+" On ambiguous completion, first show a list, then cycle through it
+set wildmode=list:longest,full
 
 " No beep on errors
 set visualbell
