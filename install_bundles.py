@@ -2,25 +2,25 @@
 # −*− coding: UTF−8 −*−
 
 bundles = {
-		'ack': 'mileszs/ack.vim.git',
-		'autoclose': 'Townk/vim-autoclose.git',
-		'gundo': 'sjl/gundo.vim.git',
-		'indent-object': 'michaeljsmith/vim-indent-object.git',
-		'latex-box': 'olivierverdier/vim-latex-box.git',
-		'latexrc': 'olivierverdier/vim-latexrc.git',
-		'matchit': 'tsaleh/vim-matchit.git',
-		'tComment': 'vim-scripts/tComment.git',
-		'nerdtree': 'spf13/nerdtree.git',
-		'python': 'vim-scripts/python.vim--Vasiliev.git',
-		'sinopia': 'olivierverdier/sinopia.git',
-		'snipmate': 'spf13/snipmate.vim.git',
-		'snipmate-snippets/snippets': 'olivierverdier/snipmate-snippets.git',
-		'supertab': 'ervandew/supertab.git',
-		'surround': 'tpope/vim-surround.git',
-		'tagbar': 'majutsushi/tagbar.git',
+		'ack': 'mileszs/ack.vim',
+		'autoclose': 'Townk/vim-autoclose',
+		'gundo': 'sjl/gundo.vim',
+		'indent-object': 'michaeljsmith/vim-indent-object',
+		'latex-box': 'olivierverdier/vim-latex-box',
+		'latexrc': 'olivierverdier/vim-latexrc',
+		'matchit': 'tsaleh/vim-matchit',
+		'tComment': 'vim-scripts/tComment',
+		'nerdtree': 'spf13/nerdtree',
+		'python': 'vim-scripts/python.vim--Vasiliev',
+		'sinopia': 'olivierverdier/sinopia',
+		'snipmate': 'spf13/snipmate.vim',
+		'snipmate-snippets/snippets': 'olivierverdier/snipmate-snippets',
+		'supertab': 'ervandew/supertab',
+		'surround': 'tpope/vim-surround',
+		'tagbar': 'majutsushi/tagbar',
 		}
 
-github_template = 'https://github.com/{0}'
+github_template = 'https://github.com/{0}.git'
 
 import os.path
 import subprocess
@@ -35,7 +35,7 @@ def clone_from_github(github_url, rel_destination):
 	subprocess.Popen(command)
 
 # install pathogen
-clone_from_github('tpope/vim-pathogen.git', 'pathogen')
+clone_from_github('tpope/vim-pathogen', 'pathogen')
 
 # install bundles
 for bundle_name, github_url in bundles.items():
