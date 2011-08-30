@@ -356,7 +356,7 @@ nmap <D-]> g,
 "  Tag List
 " ------------------------------------------------------------------------------
 "  Toggle the tag list and switch focus to it
-nmap <D-Bar> :TlistToggle<CR><C-W>w
+nmap <D-Bar> :TagbarToggle<CR><C-W>w
 
 if has("gui_macvim")
     let macvim_hig_shift_movement = 1

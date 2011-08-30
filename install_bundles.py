@@ -17,7 +17,7 @@ bundles = {
 		'snipmate-snippets/snippets': 'olivierverdier/snipmate-snippets.git',
 		'supertab': 'ervandew/supertab.git',
 		'surround': 'tpope/vim-surround.git',
-		'taglist': 'vim-scripts/taglist.vim.git',
+		'tagbar': 'majutsushi/tagbar.git',
 		}
 
 github_template = 'https://github.com/{0}'
