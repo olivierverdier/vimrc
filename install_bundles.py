@@ -9,7 +9,7 @@ bundles = {
 		'latex-box': 'olivierverdier/vim-latex-box.git',
 		'latexrc': 'olivierverdier/vim-latexrc.git',
 		'matchit': 'tsaleh/vim-matchit.git',
-		'nerdcommenter': 'scrooloose/nerdcommenter.git',
+		'tComment': 'vim-scripts/tComment.git',
 		'nerdtree': 'spf13/nerdtree.git',
 		'python': 'vim-scripts/python.vim--Vasiliev.git',
 		'sinopia': 'olivierverdier/sinopia.git',
