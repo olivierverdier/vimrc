@@ -100,10 +100,10 @@ vnoremap K <C-U>
 " ------------------------------------------------------------------------------
 
 set backup 						" backups are nice ...
-set backupdir=$HOME/.vim/tmp/backup//  " but not when they clog .
-silent execute '!mkdir -p $HOME/.vim/tmp/backup'
-set directory=$HOME/.vim/tmp/swap// 	" Same for swap files
-silent execute '!mkdir -p $HOME/.vim/tmp/swap'
+set backupdir=$HOME/.vimtmp/backup//  " but not when they clog .
+silent execute '!mkdir -p $HOME/.vimtmp/backup'
+set directory=$HOME/.vimtmp/swap// 	" Same for swap files
+silent execute '!mkdir -p $HOME/.vimtmp/swap'
 
 " ------------------------------------------------------------------------------
 " Auto change dir
@@ -165,8 +165,8 @@ set history=1000		" keep 50 lines of command line history
 
 if exists('+undofile')
 	set undofile " allow undoing even after the file is closed
-	set undodir=$HOME/.vim/tmp/undo//
-	silent execute '!mkdir -p $HOME/.vim/tmp/undo'
+	set undodir=$HOME/.vimtmp/undo//
+	silent execute '!mkdir -p $HOME/.vimtmp/undo'
 endif
 
 " Remember cursor position using views
