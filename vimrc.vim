@@ -307,9 +307,10 @@ nmap <D-\> :NERDTreeToggle<CR>
 nnoremap <leader>v :e $HOME/.vim/vimrc.vim<CR>
 
 " ------------------------------------------------------------------------------
-" Split switching
+" Window Move
 " ------------------------------------------------------------------------------
-nmap <C-s> <C-w>w
+"  Go to the next window
+nmap ! <C-w>w
 
 " ------------------------------------------------------------------------------
 " Alternate Buffer Switch
