@@ -350,12 +350,12 @@ set virtualedit=onemore
 nnoremap $ $l
 
 " since <tab> is redefined, we have to save the original behaviour
-nnoremap - <C-O>
-nnoremap = <C-I>
+nnoremap <D-[> <C-O>
+nnoremap <D-]> <C-I>
 
 " go to next/previous edited point
-nmap <D-[> g;
-nmap <D-]> g,
+nmap - g;
+nmap = g,
 
 " ------------------------------------------------------------------------------
 "  Tag List

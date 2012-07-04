@@ -25,10 +25,10 @@ General Key Bindings
 :⌘⇧A: Search with Ack in current working directory
 :⌘/: Toggle commenting on current/selected lines
 
-:-: Previous jump position
-:=: Next jump position
-:⌘[: Previous edit position
-:⌘]: Next edit position
+:⌘[:Previous jump position
+:⌘]:Next jump position
+:-: Previous edit position
+:=: Next edit position
 :⌘': Previous spelling error
 :⇥: Switch between delimiters (same as ``%``)
 
