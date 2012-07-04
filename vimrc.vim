@@ -72,9 +72,6 @@ set wildmode=list:longest,full
 " No beep on errors
 set visualbell
 
-" highlight the line the cursor is on
-set cursorline
-
 " Better terminal display
 set ttyfast
 
@@ -276,12 +273,13 @@ endif
 " ------------------------------------------------------------------------------
 " Cursor colour and blinking
 " ------------------------------------------------------------------------------
-highlight Cursor guifg=white guibg=Red
-highlight iCursor guifg=white guibg=Red
 set guicursor=n-v-c:block-Cursor
 set guicursor+=i:ver20-iCursor-blinkon600-blinkoff600
 set guicursor+=n-v-c:blinkon0
 "set guicursor+=i:blinkwait10
+"
+" highlight the line the cursor is on
+set cursorline
 
 
 " ------------------------------------------------------------------------------
