@@ -13,7 +13,7 @@ bundles = {
 		'nerdtree': 'spf13/nerdtree',
 		'python': 'vim-scripts/python.vim--Vasiliev',
 		'sinopia': 'olivierverdier/sinopia',
-		'snipmate': 'spf13/snipmate.vim',
+		'snipmate': 'garbas/snipmate.vim',
 		'snipmate-snippets/snippets': 'olivierverdier/snipmate-snippets',
 		'supertab': 'ervandew/supertab',
 		'surround': 'tpope/vim-surround',
