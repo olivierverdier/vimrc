@@ -19,14 +19,17 @@ Features
 General Key Bindings
 ''''''''''''''''''''
 
-:⌘⇧I: Toggle invisible characters
-:⌘⇧N: Toggle line numbers
-:⌘⇧R: Toggle relative line numbers
+``⌁`` denotes the leader key, which is the backslash ``\`` in this configuration.
+You may change it to some other key with ``let mapleader = "<your key here>"``.
+
+:⌁I: Toggle invisible characters
+:⌁N: Toggle line numbers
+:⌁R: Toggle relative line numbers
 :⌘⇧A: Search with Ack in current working directory
 :⌘/: Toggle commenting on current/selected lines
 
-:⌘[:Previous jump position
-:⌘]:Next jump position
+:⌘[: Previous jump position
+:⌘]: Next jump position
 :-: Previous edit position
 :=: Next edit position
 :⌘': Previous spelling error
@@ -35,19 +38,18 @@ General Key Bindings
 :⌃U: Activate gundo_
 
 :⌘\\: Toggle file explorer split window
+:^p: Start ControlP in buffer mode
 :⌘|: Toggle tag list
 
 ://: Search current selection
-:⌃W: Switch between split windows
+:!: Switch between split windows
 :_: Switch with last buffer
 
-
-:⌃P: Show current syntax scope
-
-``⌁`` denotes the leader key, which is the backslash ``\`` in this configuration.
-You may change it to some other key with ``let mapleader = "<your key here>"``.
+:⌁P: Show current syntax scope
 
 :⌁v: Edit vim configuration file
+
+:␣: Start search
 :⌁␣: Switch search highlight off
 
 Some the of the key bindings above have also a leader key equivalent (when working outside MacVim).
@@ -55,13 +57,10 @@ Some the of the key bindings above have also a leader key equivalent (when worki
 LaTeX Specific
 ''''''''''''''
 
-:⌘⏎: Save, compile, and show preview of current document (you need `pydflatex`_ for this)
+:⌘⏎: Save, compile, and show preview of current document with SCons
 :⌘|: Table of Contents
 :⌃E: Change current environment
 :⌃W: Wrap selection with command
-:⌘⇧B: Run ``bibtex`` on current document
-
-.. _pydflatex: https://github.com/olivierverdier/pydflatex
 
 RestructuredText Specific
 '''''''''''''''''''''''''
