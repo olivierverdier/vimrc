@@ -216,7 +216,6 @@ nnoremap <silent><leader><space> :nohlsearch<cr>
 
 " search the selected text
 vmap // y/<C-R>"<CR>
-vmap <D-E> y/<C-R>"<CR>
 
 " project wide search with Ack
 nmap <D-A> :Ack<space>
@@ -404,3 +403,32 @@ let g:PyLintDissabledMessages = 'W0312,C0103,C0111,W0404,R0912,R0914,C0302,R0903
 " W0704: Except doesn't do anything 
 " E1101,E1103: %s %r has no %r member 
 let g:PyLintCWindow = 1
+
+" ------------------------------------------------------------------------------
+" Quickfix
+" ------------------------------------------------------------------------------
+
+" Code from http://vim.wikia.com/wiki/Toggle_to_open_or_close_the_quickfix_window
+
+" toggles the quickfix window.
+command -bang -nargs=? QFix call QFixToggle(<bang>0)
+function! QFixToggle(forced)
+  if exists("g:qfix_win") && a:forced == 0
+    cclose
+  else
+    execute "copen " . g:jah_Quickfix_Win_Height
+  endif
+endfunction
+
+" used to track the quickfix window
+augroup QFixToggle
+ autocmd!
+ autocmd BufWinEnter quickfix let g:qfix_win = bufnr("$")
+ autocmd BufWinLeave * if exists("g:qfix_win") && expand("<abuf>") == g:qfix_win | unlet! g:qfix_win | endif
+augroup END
+
+let g:jah_Quickfix_Win_Height = 10
+
+" toggle the Quickfix window
+nmap <silent><D-e> :QFix<cr>
+nmap <silent> <leader>e :QFix<cr>
