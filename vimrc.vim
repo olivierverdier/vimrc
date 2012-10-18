@@ -235,7 +235,8 @@ set matchpairs+=<:>
 " Soft wrapping
 " ------------------------------------------------------------------------------
 " display line breaks
-set showbreak=…\ \|
+set showbreak=↳\ 
+" let &showbreak = '↳ '
 " no hard wrapping at all
 set textwidth=0
 " no automatic wrapping depending on window width
