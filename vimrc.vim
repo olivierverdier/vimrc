@@ -36,7 +36,7 @@ endif
 " Show syntax highlighting groups for word under cursor
 " http://stackoverflow.com/questions/1467438/
 " https://github.com/nelstrom/dotfiles/blob/master/vimrc
-nmap <C-P> :call <SID>SynStack()<CR>
+nmap <leader>p :call <SID>SynStack()<CR>
 function! <SID>SynStack()
     if !exists("*synstack")
         return
@@ -450,3 +450,9 @@ let g:pydiction_location = '~/.vim/bundle/Pydiction/complete-dict'
 " LaTeX format by default
 " ------------------------------------------------------------------------------
 let g:tex_flavor = "latex"
+
+" ------------------------------------------------------------------------------
+" Control-P
+" ------------------------------------------------------------------------------
+" nmap <silent><leader>b :CtrlPBuffer<cr>
+let g:ctrlp_cmd = 'CtrlPBuffer'
