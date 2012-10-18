@@ -432,3 +432,10 @@ let g:jah_Quickfix_Win_Height = 10
 " toggle the Quickfix window
 nmap <silent><D-e> :QFix<cr>
 nmap <silent> <leader>e :QFix<cr>
+
+
+" ------------------------------------------------------------------------------
+" Autoclose
+" ------------------------------------------------------------------------------
+" Disable autoclosing of < >
+let g:AutoClosePairs = {'(': ')', '{': '}', '[': ']', '"': '"', "'": "'", '`': '`', '«': '»'}
