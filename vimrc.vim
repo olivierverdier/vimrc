@@ -54,8 +54,8 @@ filetype indent on " load indent files, to automatically do language-dependent i
 
 set modelines=0 " to prevent security exploits
 
-" Show mode message in white on red
-set showmode
+" Mode messages (superseded by powerline)
+set noshowmode
 highlight ModeMsg ctermfg=White ctermbg=Red guifg=White guibg=Red
 
 " show command information in lower right corner
@@ -142,7 +142,15 @@ set statusline+=C%v\     "cursor column
 set statusline+=L%l/%L   "cursor line/total lines
 set statusline+=\ %P    "percent through file
 
+" Note: the last settings are lost when using powerline
+
+" Normal mode:
+let g:Powerline_mode_n = 'N'
+
+call Pl#Theme#InsertSegment('charcode', 'after', 'filetype')
+
 set laststatus=2 " always enable status line
+
 
 function! CurDir()
 	let homedir = $HOME
