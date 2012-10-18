@@ -220,6 +220,10 @@ vmap // y/<C-R>"<CR>
 " project wide search with Ack
 nmap <D-A> :Ack<space>
 let g:ackprg="ack -H -i --nocolor --nogroup --column"
+
+" Alias for searching
+map <space> /
+
 " ------------------------------------------------------------------------------
 " Switch between delimiters with <tab>
 " ------------------------------------------------------------------------------
