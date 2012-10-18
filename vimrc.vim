@@ -212,7 +212,7 @@ set incsearch
 set showmatch
 set hlsearch
 " get rid of the highlighted searches
-nnoremap <leader><space> :nohlsearch<cr>
+nnoremap <silent><leader><space> :nohlsearch<cr>
 
 " search the selected text
 vmap // y/<C-R>"<CR>
