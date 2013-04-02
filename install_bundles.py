@@ -12,6 +12,7 @@ bundles = {
 		'matchit': 'tsaleh/vim-matchit',
 		'tComment': 'vim-scripts/tComment',
 		'nerdtree': 'spf13/nerdtree',
+		'pylint': 'vim-scripts/pylint-mode',
 		'python': 'vim-scripts/python.vim--Vasiliev',
 		'sinopia': 'olivierverdier/sinopia',
 		'snipmate': 'garbas/snipmate.vim',
