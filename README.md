@@ -101,27 +101,27 @@ Bundle | Short Description
 
 ## Install
 
-This vim configuration should work with any vim editor, but if you are on Mac OS X, I strongly suggest that you install (the last snapshot of) MacVim::
+This vim configuration should work with any vim editor, but if you are on Mac OS X, I strongly suggest that you install (the last snapshot of) MacVim:
 
-```
+```sh
 brew install macvim
 ```
 
 Put the current ``~/.vim`` directory aside (if any).
-Clone this repository into that ``.vim`` directory::
+Clone this repository into that ``.vim`` directory:
 
 ```sh
 git clone https://github.com/olivierverdier/vimrc.git ~/.vim
 ```
 
 Put aside the current ``~/.vimrc`` file.
-Create a symbolic link to the configuration file::
+Create a symbolic link to the configuration file:
 
 ```sh
 ln -s ~/.vim/vimrc.vim ~/.vimrc
 ```
 
-Install all the bundles::
+Install all the bundles:
 
 ```sh
 python ~/.vim/install_bundles.py
