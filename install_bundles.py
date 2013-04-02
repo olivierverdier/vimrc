@@ -10,7 +10,6 @@ bundles = {
 		'latex-box': 'olivierverdier/vim-latex-box',
 		'latexrc': 'olivierverdier/vim-latexrc',
 		'matchit': 'tsaleh/vim-matchit',
-		'tComment': 'vim-scripts/tComment',
 		'nerdtree': 'spf13/nerdtree',
 		'pylint': 'vim-scripts/pylint-mode',
 		'python': 'vim-scripts/python.vim--Vasiliev',
@@ -20,6 +19,7 @@ bundles = {
 		'supertab': 'ervandew/supertab',
 		'surround': 'tpope/vim-surround',
 		'tagbar': 'majutsushi/tagbar',
+		'tComment': 'tomtom/tcomment_vim',
 		}
 
 github_template = 'https://github.com/{0}.git'
