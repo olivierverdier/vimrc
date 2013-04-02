@@ -4,6 +4,7 @@
 bundles = {
 		'ack': 'mileszs/ack.vim',
 		'autoclose': 'Townk/vim-autoclose',
+		'ctrlp': 'kien/ctrlp.vim',
 		'gundo': 'sjl/gundo.vim',
 		'indent-object': 'michaeljsmith/vim-indent-object',
 		'latex-box': 'olivierverdier/vim-latex-box',
