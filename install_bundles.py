@@ -11,6 +11,7 @@ bundles = {
 		'latexrc': 'olivierverdier/vim-latexrc',
 		'matchit': 'tsaleh/vim-matchit',
 		'nerdtree': 'spf13/nerdtree',
+		'numbers': 'myusuf3/numbers.vim',
 		'pylint': 'vim-scripts/pylint-mode',
 		'python': 'vim-scripts/python.vim--Vasiliev',
 		'repeat': 'tpope/vim-repeat',

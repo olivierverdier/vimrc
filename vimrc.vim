@@ -275,12 +275,7 @@ highlight SpecialKey guifg=#4a4a59 ctermfg=3*
 " ------------------------------------------------------------------------------
 " Toggle line numbers
 " ------------------------------------------------------------------------------
-nmap <leader>n :set number!<CR>
-nmap <D-N> :set number!<CR>
-if exists('+relativenumber')
-	nmap <leader>r :set relativenumber!<CR>
-	nmap <D-R> :set relativenumber!<CR>
-endif
+nmap <silent><leader>n :NumbersToggle<CR>
 
 " ------------------------------------------------------------------------------
 " Cursor colour and blinking
