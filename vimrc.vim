@@ -286,8 +286,8 @@ set wrapmargin=0
 " Show/hide invisible characters
 " ------------------------------------------------------------------------------
 " Shortcut to rapidly toggle `set list`
-nmap <leader>i :set list!<CR>
-nmap <D-I> :set list!<CR>
+nmap <silent><leader>i :set list!<CR>
+nmap <silent><D-I> :set list!<CR>
 " Use the same symbols as TextMate for tabstops and EOLs
 set listchars=tab:▸\ ,eol:¬,trail:·,nbsp:·
 " make them non conspicuous
