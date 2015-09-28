@@ -434,7 +434,8 @@ noremap <silent> <C-U> :GundoToggle<CR>
 " Pylint-mode
 " ------------------------------------------------------------------------------
 
-let g:PyLintDissabledMessages = 'W0312,C0103,C0111,W0404,R0912,R0914,C0302,R0903,C0301,W0704,W0201,E1101,E1103,W0402,W0142'
+let g:PyLintDissabledMessages = 'W0312,C0103,C0111,C0202,W0404,R0912,R0914,C0302,R0903,C0301,W0704,W0201,E1101,E1103,W0402,W0142'
+" C0202: Class method should have "cls" as first argument
 " W0201: Attribute %r defined outside __init__ 
 " W0704: Except doesn't do anything 
 " E1101,E1103: %s %r has no %r member 
