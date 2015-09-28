@@ -244,6 +244,9 @@ nnoremap <silent><leader><space> :nohlsearch<cr>
 " search the selected text
 vmap // y/<C-R>"<CR>
 
+" remap backward search
+noremap # #//<CR>``
+
 " project wide search with Ack
 nmap <D-A> :Ack<space>
 let g:ackprg="ack -H -i --nocolor --nogroup --column"
