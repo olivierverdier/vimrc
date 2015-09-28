@@ -159,9 +159,12 @@ set statusline+=\ %P    "percent through file
 " Note: the last settings are lost when using powerline
 
 " Normal mode:
-let g:Powerline_mode_n = 'N'
+" let g:Powerline_mode_n = 'N'
 
-call Pl#Theme#InsertSegment('charcode', 'after', 'filetype')
+" New version of Powerline
+if has('gui_running')
+	set runtimepath+=$HOME/.local/lib/python2.7/site-packages/powerline/bindings/vim/
+endif
 
 set laststatus=2 " always enable status line
 
@@ -172,6 +175,8 @@ function! CurDir()
     return curdir
 endfunction
 
+let g:airline#extensions#whitespace#checks = []
+" let g:airline#extensions#tabline#enabled = 1
 
 " ------------------------------------------------------------------------------
 " Store info after file is closed
