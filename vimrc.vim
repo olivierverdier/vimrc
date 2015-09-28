@@ -493,3 +493,8 @@ let g:tex_flavor = "latex"
 " ------------------------------------------------------------------------------
 " nmap <silent><leader>b :CtrlPBuffer<cr>
 let g:ctrlp_cmd = 'CtrlPBuffer'
+
+" ------------------------------------------------------------------------------
+" Quickfixsigns
+" ------------------------------------------------------------------------------
+let g:quickfixsigns_classes = ['qfl', 'loc', 'marks', 'vcsdiff', 'breakpoints',]
