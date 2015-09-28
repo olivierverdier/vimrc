@@ -380,7 +380,7 @@ endif
 " :inoremap <Esc> <Esc>`^
 
 " Allow to move to the end of line
-set virtualedit=onemore
+" set virtualedit=onemore
 " $ moves after the last character
 nnoremap $ $l
 
@@ -400,6 +400,7 @@ nmap <D-Bar> :TagbarToggle<CR><C-W>w
 
 if has("gui_macvim")
     let macvim_hig_shift_movement = 1
+	set guioptions-=T
 endif
 
 " ------------------------------------------------------------------------------
