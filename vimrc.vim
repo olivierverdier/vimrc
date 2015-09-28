@@ -1,6 +1,14 @@
 " ------------------------------------------------------------------------------
 " Bundle Support with pathogen
 " ------------------------------------------------------------------------------
+" Setup a list of plugins to disable in command mode:
+let g:pathogen_disabled = []
+if !has('gui_running')
+    call add(g:pathogen_disabled, 'AsyncCommand')
+endif
+
+" ------------------------------------------------------------------------------
+"  Start Pathogen
 "  Pathogen url: https://github.com/tpope/vim-pathogen
 " Setup Bundle Support {
 " The next two lines ensure that the ~/.vim/bundle/ system works
@@ -26,6 +34,12 @@ set encoding=utf-8
 syntax on
 if  has("gui_running")
   colorscheme sinopia
+	" set background=dark
+  colorscheme solarized
+  " colorscheme base16-default
+  let g:solarized_contrast='high'
+  se t_Co=256
+  let g:solarized_termcolors=256
 else
 	set t_Co=8
 	set t_Sb=[4%dm
