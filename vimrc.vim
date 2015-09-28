@@ -316,7 +316,9 @@ set cursorline
 " Fonts
 " ------------------------------------------------------------------------------
 "set guifont=Bitstream\ Vera\ Sans\ Mono:h12
-set guifont=Menlo:h12
+" set guifont=Menlo:h17
+set guifont=Hack:h17
+" set guifont=Source\ Code\ Pro:h13
 set linespace=2
 
 " ------------------------------------------------------------------------------
