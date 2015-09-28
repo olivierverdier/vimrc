@@ -262,7 +262,7 @@ nmap <tab> %
 vmap <tab> %
 
 " < and > are considering as a matching pair
-set matchpairs+=<:>
+" set matchpairs+=<:>
 
 " ------------------------------------------------------------------------------
 " Soft wrapping
