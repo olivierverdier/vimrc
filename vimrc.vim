@@ -32,22 +32,20 @@ endif
 " ------------------------------------------------------------------------------
 " Syntax Highlighting
 " ------------------------------------------------------------------------------
-" Switch syntax highlighting on, when the terminal has colors
-syntax on
-if  has("gui_running")
-  colorscheme sinopia
+" if  has("gui_running")
+  " colorscheme sinopia
 	" set background=dark
   colorscheme solarized
   " colorscheme base16-default
   let g:solarized_contrast='high'
   se t_Co=256
   let g:solarized_termcolors=256
-else
-	set t_Co=8
-	set t_Sb=[4%dm
-	set t_Sf=[3%dm
-	colorscheme zellner
-endif
+" else
+" 	set t_Co=8
+" 	set t_Sb=[4%dm
+" 	set t_Sf=[3%dm
+" 	colorscheme zellner
+" endif
 
 " Show syntax highlighting groups for word under cursor
 " http://stackoverflow.com/questions/1467438/
