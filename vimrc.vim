@@ -19,6 +19,9 @@ endif
 
 set nocompatible	" Use Vim defaults (much better!)
 
+" make Y consistent with C and D. See :help Y.
+nnoremap Y y$
+
 " ------------------------------------------------------------------------------
 " Encoding
 " ------------------------------------------------------------------------------
