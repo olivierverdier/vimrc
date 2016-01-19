@@ -89,12 +89,12 @@ set ttyfast
 " ------------------------------------------------------------------------------
 
 
-nnoremap S J
-vnoremap S J
-nmap J <C-D>
-vmap J <C-D>
-nnoremap K <C-U>
-vnoremap K <C-U>
+" nnoremap S J
+" vnoremap S J
+nmap <C-J> <C-D>
+vmap <C-J> <C-D>
+nnoremap <C-K> <C-U>
+vnoremap <C-K> <C-U>
 
 " ------------------------------------------------------------------------------
 " Backups and swaps
