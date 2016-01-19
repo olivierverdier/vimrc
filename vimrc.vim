@@ -28,7 +28,6 @@ nnoremap Y y$
 if v:lang =~ "utf8$" || v:lang =~ "UTF-8$"
    set fileencodings=utf-8,latin1
 endif
-set encoding=utf-8
 
 " ------------------------------------------------------------------------------
 " Syntax Highlighting
