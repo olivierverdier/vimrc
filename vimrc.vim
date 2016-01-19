@@ -63,8 +63,6 @@ endfunc
 " ------------------------------------------------------------------------------
 
 filetype plugin on " automatic activation of plugin depending on file type
-filetype indent on " load indent files, to automatically do language-dependent indenting
-" last line may be replaced by 'filetype plugin indent on'
 
 set modelines=0 " to prevent security exploits
 
@@ -72,14 +70,10 @@ set modelines=0 " to prevent security exploits
 set noshowmode
 highlight ModeMsg ctermfg=White ctermbg=Red guifg=White guibg=Red
 
-" show command information in lower right corner
-set showcmd
 
 set showfulltag
 set hidden
 
-" command line completion
-set wildmenu
 " On ambiguous completion, first show a list, then cycle through it
 set wildmode=list:longest,full
 
@@ -89,15 +83,11 @@ set visualbell
 " Better terminal display
 set ttyfast
 
-" allow backspacing over everything in insert mode
-set backspace=indent,eol,start
 
 " ------------------------------------------------------------------------------
 " Scrolling
 " ------------------------------------------------------------------------------
 
-" shows some lines below/above the cursor before scrolling
-set scrolloff=4
 
 nnoremap S J
 vnoremap S J
@@ -126,7 +116,6 @@ endif
 " ------------------------------------------------------------------------------
 " Ruler and Status line
 " ------------------------------------------------------------------------------
-set ruler		" show the cursor position all the time
 set rulerformat=%30(%=\:b%n%y%m%r%w\ %l,%c%V\ %B\ %P%) 
 
 "statusline setup
@@ -185,7 +174,6 @@ let g:airline#extensions#whitespace#checks = []
 " Vim session: remember commands, registers and such
 set viminfo='20,\"50	" read/write a .viminfo file, don't store more
 			" than 50 lines of registers
-set history=1000		" keep 50 lines of command line history
 
 if exists('+undofile')
 	set undofile " allow undoing even after the file is closed
@@ -285,9 +273,6 @@ set wrapmargin=0
 " ------------------------------------------------------------------------------
 " Show/hide invisible characters
 " ------------------------------------------------------------------------------
-" Shortcut to rapidly toggle `set list`
-nmap <silent><leader>i :set list!<CR>
-nmap <silent><D-I> :set list!<CR>
 " Use the same symbols as TextMate for tabstops and EOLs
 set listchars=tab:▸\ ,eol:¬,trail:·,nbsp:·
 " make them non conspicuous
