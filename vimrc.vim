@@ -324,7 +324,9 @@ nmap <D-\> :NERDTreeToggle<CR>
 " to edit in a new window:
 " nnoremap <leader>v <C-w><C-v><C-l>:e $MYVIMRC<cr>
 " edit in current window:
-nnoremap <leader>v :e $HOME/.vim/vimrc.vim<CR>
+nnoremap <leader>, :e $HOME/.vim/vimrc.vim<CR>
+" To reload the vimrc file:
+" :source $VIMRC<cr>
 
 " ------------------------------------------------------------------------------
 " Window Move
