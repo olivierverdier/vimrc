@@ -520,3 +520,6 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
 let g:syntastic_tex_checkers = []
+
+let g:AutoPairsShortcutFastWrap=""
+
