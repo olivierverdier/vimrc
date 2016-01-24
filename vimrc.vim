@@ -280,7 +280,6 @@ set wrapmargin=0
 " Use the same symbols as TextMate for tabstops and EOLs
 set listchars=tab:▸\ ,eol:¬,trail:·,nbsp:·
 " make them non conspicuous
-highlight NonText guifg=#4a4a59 ctermfg=3*
 highlight SpecialKey guifg=#4a4a59 ctermfg=3*
 
 " ------------------------------------------------------------------------------
