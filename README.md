@@ -1,4 +1,4 @@
-# Textmate to Vim switching kit
+# This vim configuration is not up to date anymore, as I have now switched to the amazing [spacemacs editor](http://spacemacs.org/) instead.
 
 
 This vim configuration kit is:
