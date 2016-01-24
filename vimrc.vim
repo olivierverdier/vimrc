@@ -7,6 +7,7 @@ if !has('gui_running')
     call add(g:pathogen_disabled, 'AsyncCommand')
 endif
 
+
 " ------------------------------------------------------------------------------
 "  Start Pathogen
 "  Pathogen url: https://github.com/tpope/vim-pathogen
@@ -95,6 +96,12 @@ nmap <C-J> <C-D>
 vmap <C-J> <C-D>
 nnoremap <C-K> <C-U>
 vnoremap <C-K> <C-U>
+"
+" remap arrow keys
+nnoremap <left> :bprev<CR>
+nnoremap <right> :bnext<CR>
+nnoremap <up> :tabnext<CR>
+nnoremap <down> :tabprev<CR>
 
 " ------------------------------------------------------------------------------
 " Backups and swaps
