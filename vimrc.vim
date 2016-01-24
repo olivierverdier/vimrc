@@ -333,11 +333,22 @@ nnoremap <leader>, :e $HOME/.vim/vimrc.vim<CR>
 " ------------------------------------------------------------------------------
 "  Go to the next window
 nmap ! <C-w>w
-
+"
 " ------------------------------------------------------------------------------
 " Alternate Buffer Switch
 " ------------------------------------------------------------------------------
 nmap _ <C-^>g`"
+
+
+" shortcuts for windows
+" ------------------------------------------------------------------------------
+nnoremap <leader>v <C-w>v<C-w>l
+nnoremap <leader>s <C-w>s
+nnoremap <leader>vsa :vert sba<cr>
+" nnoremap <C-h> <C-w>h
+" nnoremap <C-j> <C-w>j
+" nnoremap <C-k> <C-w>k
+" nnoremap <C-l> <C-w>l
 
 
 " ------------------------------------------------------------------------------
