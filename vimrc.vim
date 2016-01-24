@@ -157,12 +157,7 @@ set statusline+=\ %P    "percent through file
 " Normal mode:
 " let g:Powerline_mode_n = 'N'
 
-" New version of Powerline
-if has('gui_running')
-	set runtimepath+=$HOME/.local/lib/python2.7/site-packages/powerline/bindings/vim/
-endif
 
-set laststatus=2 " always enable status line
 
 
 function! CurDir()
