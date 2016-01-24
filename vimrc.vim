@@ -498,3 +498,11 @@ let g:haskell_conceal_wide = 1
 nmap <leader>ht :GhcModType<CR>
 nmap <leader>hc :GhcModTypeClear<CR>
 
+" ------------------------------------------------------------------------------
+" vimtex
+" ------------------------------------------------------------------------------
+
+let g:vimtex_fold_enabled=0
+let g:vimtex_indent_enabled=0
+let g:vimtex_imaps_enabled=0
+
