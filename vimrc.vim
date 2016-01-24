@@ -228,12 +228,10 @@ set ignorecase
 set smartcase
 " line global is by default
 set gdefault
-" incremental search
-set incsearch
 set showmatch
 set hlsearch
-" get rid of the highlighted searches
-nnoremap <silent><leader><space> :nohlsearch<cr>
+
+" nnoremap <BS> :set hlsearch! hlsearch?<cr>
 
 " search the selected text
 vmap // y/<C-R>"<CR>
