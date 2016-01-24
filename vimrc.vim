@@ -216,6 +216,10 @@ set autoindent " indent at the same level of the previous line
 " Switch autoindent
 nmap <leader>a :set autoindent!<CR>
 
+" reselect visual block after indent
+vnoremap < <gv
+vnoremap > >gv
+
 " ------------------------------------------------------------------------------
 " Search/Replace
 " ------------------------------------------------------------------------------
