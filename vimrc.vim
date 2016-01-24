@@ -536,3 +536,6 @@ let g:syntastic_tex_checkers = []
 
 let g:AutoPairsShortcutFastWrap=""
 
+
+ let g:UltiSnipsRemoveSelectModeMappings = 0
+
